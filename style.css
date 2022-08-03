@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box; 
+}
+body {
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    margin: auto;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    color: hsl(240, 6%, 50%);
+}
+.card {
+    background-color: white;
+    max-width: 67.3%;
+    height: 80%;
+    border-radius: 20px;
+    display: grid; 
+    grid-template-columns: repeat(2,1fr);
+    font-size: 12px;
+    font-weight: 700;
+    overflow: auto;
+} 
+.image { 
+    padding-top: 60px;
+    margin-left: -80px;
+    background: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat; 
+    background-position: -500px -300px;
+}
+.woman-image {
+    position: static;
+}
+.box-image {
+    position: absolute;
+    z-index: 2;
+    top: 41%;
+    left: 9.5%;
+}
+h1 {
+    font-size:30px;
+    font-weight: 700;
+    margin-top: 15%;
+    margin-bottom: 30px;
+    color: hsl(238, 29%, 16%);
+}
+section {
+   margin-left: 20px;
+}
+.faq {
+    max-width: 75%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    cursor: pointer;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question:hover { 
+    color: hsl(14, 88%, 65%); 
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+}
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+.faq.active .answer {
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+.faq.active img {
+    transform: rotate(180deg);
+}
+img {
+    transition: transform .5s ease-in;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+@media (max-width: 480px) { 
+    body {
+        padding-top: 30%;
+    }
+    section {
+        padding-bottom: 20%;
+     }
+    .box-image {
+        display: none;
+    }
+    .card { 
+        grid-template-columns: 1fr;
+        padding-top: 0 ;
+        max-width: 86%; 
+        border-radius: 30px;
+    } 
+    .image { 
+        padding-top: 0px;
+        margin-left: 0px;
+        background: url(images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat; 
+        background-position: 45% 10%;
+        padding-bottom: 50%;
+        background-size: 80% ;
+    }
+    .woman-image {
+        position: absolute; 
+        width: 70%; 
+        height: auto;
+        top: 7%;
+        left: 16%;
+    }
+    h1 {
+        text-align: center;
+        font-size: 30px;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    .faq {
+        max-width: 90%;
+        padding-bottom: 5px;
+        border-bottom: 1px solid hsl(240, 5%, 91%);
+    }
+}
