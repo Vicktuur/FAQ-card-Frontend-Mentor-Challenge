@@ -46,7 +46,7 @@ Users should be able to:
 
 ### What I learned
 
-I learned about background images and positioning with the appropraiate responsive widths. For example below
+I learned about background images and positioning with the appropraiate responsive widths. As shown in the example below 👇
 ```css
 .image { 
         padding-top: 0px;
@@ -58,7 +58,7 @@ I learned about background images and positioning with the appropraiate responsi
         background-size: 80%;
     }
 ```
-I also learnt to hide and show sections with just a few lines of javascript as written below
+I also learnt to hide and show sections with just a few lines of javascript as illustrated below 👇
 ```js
 const faqs = document.querySelectorAll(".faq");
         faqs.forEach((faq) => {
